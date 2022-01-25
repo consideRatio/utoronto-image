@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+    - name: Test space
+      run: df -h
     - name: checkout files in repo
       uses: actions/checkout@main
 
