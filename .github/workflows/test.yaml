@@ -37,3 +37,6 @@ jobs:
 
     - name: docker push
       run: docker push quay.io/2i2c/utoronto-image:test
+
+    - name: Report disk space
+      run: df -h
