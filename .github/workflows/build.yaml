@@ -12,10 +12,11 @@ jobs:
 
     # We are running out of space while building the image, because it is quite big
     # https://github.com/actions/virtual-environments/issues/2606#issuecomment-772683150
-    # This gains us an additional 30GB, to go with initial 14GB
+    # and https://github.com/easimon/maximize-build-space/blob/b4d02c14493a9653fe7af06cc89ca5298071c66e/action.yml#L104
+    # This gains us an additional 33GB, to go with initial 14GB
     - name: cleanup disk space
       run: |
-        sudo rm -rf /usr/local/lib/android /usr/share/dotnet
+        sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc
         df -h
 
     - name: Checkout files in repo
