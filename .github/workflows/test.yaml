@@ -12,7 +12,9 @@ jobs:
     # https://github.com/actions/virtual-environments/issues/2606#issuecomment-772683150
     # This gains us an additional 30GB, to go with initial 14GB
     - name: cleanup disk space
-      run: sudo rm -rf /usr/local/lib/android /usr/share/dotnet
+      run: |
+        sudo rm -rf /usr/local/lib/android /usr/share/dotnet
+        df -h
 
     - name: checkout files in repo
       uses: actions/checkout@main
