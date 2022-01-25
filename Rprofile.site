@@ -4,4 +4,9 @@ local({
     options(repos = r)
     options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
     options(BioC_mirror = "https://packagemanager.rstudio.com/bioconductor")
+
+    # Set Python executable R should use with Reticulate
+    # Essential for working with libraries like tensorflow
+    # Needs to be set here as RStudio doesn't load what's in parent `env`
+    Sys.setenv(RETICULATE_PYTHON="/opt/conda/bin/python")
 })
