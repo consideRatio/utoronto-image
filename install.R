@@ -103,7 +103,8 @@ cran_packages <- c(
   "BiocManager", "1.30.16",
   # From https://github.com/2i2c-org/utoronto-image/issues/6
   "tensorflow", "2.7.0",
-  "keras", "2.7.0"
+  "keras", "2.7.0",
+  "randomNames", "1.5-0.0"
 )
 
 github_packages <- c(
@@ -111,7 +112,8 @@ github_packages <- c(
   "cutterkom/generativeart", "56ce6beed0433748b4372bfffba0e1c9f2740f9b",
   "djnavarro/flametree", "0999530f758d074c214c068726e68786bb4698f6",
   # for use with otter-grader
-  "ucbds-infra/ottr", "1d39645cb718ef17e71fa3d54f2871cfd5cc991f"
+  "ucbds-infra/ottr", "1d39645cb718ef17e71fa3d54f2871cfd5cc991f",
+  "elb0/myStarship", "9435da5255c25605c3741f6c6e7da9ca5935d8e3"
 )
 
 for (i in seq(1, length(cran_packages), 2)) {
