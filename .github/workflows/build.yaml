@@ -22,7 +22,7 @@ jobs:
     - name: Checkout files in repo
       uses: actions/checkout@main
 
-    - name: Update jupyter dependencies with repo2docker
+    - name: Build and push the image
       uses: yuvipanda/repo2docker-action@docker-push
       id: r2d
       with:
@@ -32,9 +32,5 @@ jobs:
         DOCKER_REGISTRY: "quay.io"
         IMAGE_NAME: "2i2c/utoronto-image"
 
-    - name: Login to Quay.io
-      uses: docker/login-action@v1
-      with:
-        registry: quay.io
-        username: ${{ secrets.QUAY_USERNAME }}
-        password: ${{ secrets.QUAY_PASSWORD }}
+    - name: Report disk space
+      run: df -h
