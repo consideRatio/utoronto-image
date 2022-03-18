@@ -12,7 +12,7 @@ cran_packages <- c(
   "knitr", "1.37",
   "rmarkdown", "2.11",
   "Rcpp", "1.0.7",
-  "reticulate", "1.22",
+  "reticulate", "1.24",
   "openintro", "2.2.0",
   "gridExtra", "2.3",
   "BHH2", "2016.05.31",
