@@ -194,7 +194,12 @@ COPY environment.yml /tmp/
 
 RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml && mamba clean -afy
 # For https://2i2c.freshdesk.com/a/tickets/187
-RUN python -m textblob.download_corpora
+# If we don't set `NLTK_DATA`, the data gets downloaded onto $HOME, which
+# isn't available when the image is loaded onto JupyterHub.
+# So we download alongside our packages.
+# Note that textblob.download_corpora just calls nltk to download corpora
+ENV NLTK_DATA ${CONDA_DIR}/nltk_data
+RUN mkdir -p ${NLTK_DATA} && python -m textblob.download_corpora
 
 COPY install-jupyter-extensions.bash /tmp/install-jupyter-extensions.bash
 RUN /tmp/install-jupyter-extensions.bash
