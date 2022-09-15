@@ -185,9 +185,21 @@ COPY install.R /tmp/install.R
 RUN /tmp/install.R && \
 	rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
+# Install bioconductor separately, as it seems to fail often
+COPY install-bioconductor.R /tmp/install-bioconductor.R
+RUN /tmp/install-bioconductor.R && \
+	rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
 COPY environment.yml /tmp/
 
 RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml && mamba clean -afy
+# For https://2i2c.freshdesk.com/a/tickets/187
+# If we don't set `NLTK_DATA`, the data gets downloaded onto $HOME, which
+# isn't available when the image is loaded onto JupyterHub.
+# So we download alongside our packages.
+# Note that textblob.download_corpora just calls nltk to download corpora
+ENV NLTK_DATA ${CONDA_DIR}/nltk_data
+RUN mkdir -p ${NLTK_DATA} && python -m textblob.download_corpora
 
 COPY install-jupyter-extensions.bash /tmp/install-jupyter-extensions.bash
 RUN /tmp/install-jupyter-extensions.bash
