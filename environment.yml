@@ -63,3 +63,6 @@ dependencies:
 
     # From https://2i2c.freshdesk.com/a/tickets/57
     - jax[cpu]
+
+    # From https://2i2c.freshdesk.com/a/tickets/187
+    - textblob==0.17.1

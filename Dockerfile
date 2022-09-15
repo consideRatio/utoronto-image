@@ -193,6 +193,8 @@ RUN /tmp/install-bioconductor.R && \
 COPY environment.yml /tmp/
 
 RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml && mamba clean -afy
+# For https://2i2c.freshdesk.com/a/tickets/187
+RUN python -m textblob.download_corpora
 
 COPY install-jupyter-extensions.bash /tmp/install-jupyter-extensions.bash
 RUN /tmp/install-jupyter-extensions.bash
