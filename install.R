@@ -134,11 +134,3 @@ for (i in seq(1, length(github_packages), 2)) {
     ref = github_packages[i + 1]
   )
 }
-
-
-# Install biocmanager version 3.12, for R 4.0
-BiocManager::install(version = '3.12')
-# Install packages from bioconductor
-BiocManager::install(c(
-  "edgeR"
-))

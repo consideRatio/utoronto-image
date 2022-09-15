@@ -185,6 +185,11 @@ COPY install.R /tmp/install.R
 RUN /tmp/install.R && \
 	rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
+# Install bioconductor separately, as it seems to fail often
+COPY install-bioconductor.R /tmp/install-bioconductor.R
+RUN /tmp/install-bioconductor.R && \
+	rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
 COPY environment.yml /tmp/
 
 RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml && mamba clean -afy
