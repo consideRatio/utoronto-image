@@ -104,7 +104,10 @@ cran_packages <- c(
   # From https://github.com/2i2c-org/utoronto-image/issues/6
   "tensorflow", "2.7.0",
   "keras", "2.7.0",
-  "randomNames", "1.5-0.0"
+  "randomNames", "1.5-0.0",
+  # From https://2i2c.freshdesk.com/a/tickets/205
+  "ggpmisc", "0.5.0",
+  "openxlsx", "4.2.5"
 )
 
 github_packages <- c(
