@@ -201,9 +201,6 @@ RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml && mamba clean -afy
 ENV NLTK_DATA ${CONDA_DIR}/nltk_data
 RUN mkdir -p ${NLTK_DATA} && python -m textblob.download_corpora
 
-COPY install-jupyter-extensions.bash /tmp/install-jupyter-extensions.bash
-RUN /tmp/install-jupyter-extensions.bash
-
 # Install IRKernel
 RUN r -e "install.packages('IRkernel', version='1.1.1')" && \
     r -e "IRkernel::installspec(prefix='${CONDA_DIR}')"
