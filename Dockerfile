@@ -204,6 +204,3 @@ RUN mkdir -p ${NLTK_DATA} && python -m textblob.download_corpora
 # Install IRKernel
 RUN r -e "install.packages('IRkernel', version='1.1.1')" && \
     r -e "IRkernel::installspec(prefix='${CONDA_DIR}')"
-
-# Disable history.
-ADD ipython_config.py ${CONDA_PREFIX}/etc/ipython/
