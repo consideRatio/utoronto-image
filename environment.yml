@@ -30,7 +30,7 @@ dependencies:
   - tensorflow==2.10.0
    
   # Infrastructure things
-  - jupyterlab==3.*
+  - jupyterlab==3.5.*
   - retrolab==0.3.*
   - voila==0.3.*
   - nbgitpuller==1.1.*
