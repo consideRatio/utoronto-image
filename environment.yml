@@ -30,7 +30,7 @@ dependencies:
   - tensorflow==2.10.0
    
   # Infrastructure things
-  - jupyterlab==3.5.*
+  - jupyterlab==3.5.* # Pinned to <3.6, until https://github.com/2i2c-org/infrastructure/issues/2244 is fixed
   - retrolab==0.3.*
   - voila==0.3.*
   - nbgitpuller==1.1.*
