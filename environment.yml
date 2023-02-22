@@ -59,7 +59,7 @@ dependencies:
 
     # nbextensions
     - jupyterthemes==0.20.0
-    - markus-jupyter-extension==0.1.3
+    - markus-jupyter-extension==0.1.4
 
     # From https://2i2c.freshdesk.com/a/tickets/57
     - jax[cpu]
