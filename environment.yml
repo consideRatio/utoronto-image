@@ -73,4 +73,4 @@ dependencies:
     - esda==2.4.*
     - splot==1.1.*
     - xlrd==2.0.*
-    - numba==0.53.*
+    - numba==0.56.*
