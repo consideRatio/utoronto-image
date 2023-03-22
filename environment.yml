@@ -37,7 +37,7 @@ dependencies:
   - jupyter-resource-usage==0.5.1
   - jupytext==1.13.*
   - RISE==5.7.1
-  - jupyter_contrib_nbextensions==0.5.1
+  - jupyter_contrib_nbextensions==0.7.0
   - notebook==6.5.*
   - jupyterhub==3.1.0
   - jupyter-server-proxy==3.2.*
