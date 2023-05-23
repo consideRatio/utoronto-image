@@ -72,17 +72,6 @@ RUN apt-get update -qq --yes > /dev/null && \
         openjdk-8-jre \
         libreoffice > /dev/null
 
-# Install graphviz,
-# requested by Scott Schwartz in https://2i2c.freshdesk.com/a/tickets/697
-#
-# Note that install via conda-forge wasn't mentioned in the offial docs but
-# could perhaps work as well: https://graphviz.org/download/
-#
-RUN apt-get update -qq --yes && \
-    apt-get install --yes -qq \
-        graphviz \
-        > /dev/null
-
 # for nbconvert & notebook-to-pdf
 # See https://github.com/utoronto-2i2c/jupyterhub-deploy/issues/35 as well
 RUN apt-get update -qq --yes && \
