@@ -62,7 +62,7 @@ dependencies:
     - jupyter-tree-download==1.0.1
 
     - datascience==0.17.5
-    - otter-grader==3.1.4
+    - otter-grader==4.3.4
 
     # nbextensions
     - jupyterthemes==0.20.0
