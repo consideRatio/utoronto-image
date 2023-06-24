@@ -201,6 +201,12 @@ RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml && mamba clean -afy
 ENV NLTK_DATA ${CONDA_DIR}/nltk_data
 RUN mkdir -p ${NLTK_DATA} && python -m textblob.download_corpora
 
+# Explicitly enable jupyter_contrib_nbextension
+RUN jupyter nbclassic-extension install --sys-prefix --py jupyter_nbextensions_configurator --overwrite && \
+    jupyter nbclassic-extension enable --sys-prefix --py jupyter_nbextensions_configurator && \
+    jupyter nbclassic-serverextension install --sys-prefix --py jupyter_nbextensions_configurator --overwrite && \
+    jupyter nbclassic-serverextension enable --sys-prefix --py jupyter_nbextensions_configurator
+
 # Install IRKernel
 RUN r -e "install.packages('IRkernel', version='1.1.1')" && \
     r -e "IRkernel::installspec(prefix='${CONDA_DIR}')"

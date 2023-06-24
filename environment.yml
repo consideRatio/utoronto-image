@@ -30,10 +30,8 @@ dependencies:
   - tensorflow==2.10.0
    
   # Infrastructure things
-  - jupyterlab==3.5.* # Pinned to <3.6, until https://github.com/2i2c-org/infrastructure/issues/2244 is fixed
-  # Pinned until https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/pull/152 can land
-  # See https://github.com/2i2c-org/infrastructure/issues/2380
-  - nbclassic<0.5
+  - jupyterlab==4.*
+  - nbclassic==1.*
   - retrolab==0.3.*
   - voila==0.3.*
   - nbgitpuller==1.1.*
