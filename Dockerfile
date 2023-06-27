@@ -1,5 +1,7 @@
 FROM jupyter/scipy-notebook:2023-06-27
 
+USER root
+
 # Install desktop packages
 RUN apt-get update -qq --yes > /dev/null && \
     apt-get install --yes -qq \
@@ -14,6 +16,8 @@ RUN apt-get update -qq --yes > /dev/null && \
         xubuntu-icon-theme \
         openjdk-8-jre \
         libreoffice > /dev/null
+
+USER ${NB_USER}
 
 COPY environment.yml /tmp/
 
