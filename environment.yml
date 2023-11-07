@@ -22,7 +22,6 @@ dependencies:
   - jupyter-resource-usage==0.7.*
   - jupytext==1.15.*
   - RISE==5.7.1
-  - jupyter_contrib_nbextensions==0.7.0
   - jupyter-server-proxy==4.*
 
   # From https://2i2c.freshdesk.com/a/tickets/497
@@ -44,6 +43,9 @@ dependencies:
     - jupyter-remote-desktop-proxy==1.*
     - git-credential-helpers==0.2
     - jupyter-tree-download==1.0.1
+
+    # Infrastructure thing that doesn't support python 3.11 on conda-forge
+    - jupyter_contrib_nbextensions==0.7.0
 
     - datascience==0.17.*
     - otter-grader==5.*
