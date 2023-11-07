@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:2023-11-06
+FROM quay.io/jupyter/scipy-notebook:2023-11-06
 
 USER root
 
