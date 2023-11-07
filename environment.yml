@@ -15,7 +15,7 @@ dependencies:
   - astropy==5.3.*
   - galpy==1.9.*
   - libgfortran==3.0.0
-  - tensorflow==2.14.*
+  - tensorflow==2.13.*
 
   # Infrastructure things
   - nbgitpuller==1.2.*
@@ -30,7 +30,7 @@ dependencies:
   - esda==2.5.*
   - splot==1.1.*
   - xlrd==2.0.*
-  - numba==0.58.*
+  - numba==0.57.*
 
   # python-graphviz installed on request by Scott Schwartz in
   # https://2i2c.freshdesk.com/a/tickets/697?note=80283596987
