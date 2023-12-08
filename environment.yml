@@ -16,7 +16,7 @@ dependencies:
   - galpy==1.9.*
   - libgfortran==3.0.0
   - conda-tree
-  - tensorflow==2.14.*
+  - tensorflow
 
   # Infrastructure things
   - nbgitpuller==1.2.*
