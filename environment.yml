@@ -9,7 +9,7 @@ dependencies:
   - nltk==3.8.*
   - spacy==3.7.*
   - geopandas
-  - geopy==2.4.*
+  - geopy
   # From https://github.com/utoronto-2i2c/jupyterhub-deploy/issues/29
   - astroquery==0.4.*
   - astropy==5.3.*
