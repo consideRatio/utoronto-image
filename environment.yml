@@ -22,7 +22,7 @@ dependencies:
   - nbgitpuller==1.2.*
   - jupyter-resource-usage==0.7.*
   - jupytext==1.15.*
-  - RISE==5.7.1
+  # - RISE==5.7.1
   - jupyter-server-proxy==4.*
 
   # From https://2i2c.freshdesk.com/a/tickets/497
