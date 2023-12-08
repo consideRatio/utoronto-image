@@ -15,7 +15,8 @@ dependencies:
   - astropy==5.3.*
   - galpy==1.9.*
   - libgfortran==3.0.0
-  - tensorflow==2.13.*
+  - conda-tree
+  # - tensorflow==2.13.*
 
   # Infrastructure things
   - nbgitpuller==1.2.*
