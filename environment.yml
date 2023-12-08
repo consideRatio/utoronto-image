@@ -8,7 +8,7 @@ dependencies:
   - networkx==3.2.*
   - nltk==3.8.*
   - spacy==3.7.*
-  - geopandas
+  - geopandas==0.14.*
   - geopy==2.4.*
   # From https://github.com/utoronto-2i2c/jupyterhub-deploy/issues/29
   - astroquery==0.4.*
@@ -16,7 +16,7 @@ dependencies:
   - galpy==1.9.*
   - libgfortran==3.0.0
   - conda-tree
-  - tensorflow==2.13.*
+  - tensorflow==2.14.*
 
   # Infrastructure things
   - nbgitpuller==1.2.*
