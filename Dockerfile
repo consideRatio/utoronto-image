@@ -23,8 +23,6 @@ COPY environment.yml /tmp/
 
 RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml && mamba clean -afy
 
-RUN conda-tree deptree --full
-
 # For https://2i2c.freshdesk.com/a/tickets/187
 # If we don't set `NLTK_DATA`, the data gets downloaded onto $HOME, which
 # isn't available when the image is loaded onto JupyterHub.
