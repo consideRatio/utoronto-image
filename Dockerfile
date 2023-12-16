@@ -32,9 +32,3 @@ RUN conda-tree deptree --full
 # Note that textblob.download_corpora just calls nltk to download corpora
 ENV NLTK_DATA ${CONDA_DIR}/nltk_data
 RUN mkdir -p ${NLTK_DATA} && python -m textblob.download_corpora
-
-# Explicitly enable jupyter_contrib_nbextension
-RUN jupyter nbclassic-extension install --sys-prefix --py jupyter_nbextensions_configurator --overwrite && \
-    jupyter nbclassic-extension enable --sys-prefix --py jupyter_nbextensions_configurator && \
-    jupyter nbclassic-serverextension install --sys-prefix --py jupyter_nbextensions_configurator --overwrite && \
-    jupyter nbclassic-serverextension enable --sys-prefix --py jupyter_nbextensions_configurator

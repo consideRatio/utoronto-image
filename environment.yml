@@ -8,21 +8,18 @@ dependencies:
   - networkx==3.2.*
   - nltk==3.8.*
   - spacy==3.7.*
-  - geopandas
-  - geopy
+  - geopandas==0.14.*
+  - geopy==2.4.*
   # From https://github.com/utoronto-2i2c/jupyterhub-deploy/issues/29
   - astroquery==0.4.*
   - astropy==5.3.*
   - galpy==1.9.*
   - libgfortran==3.0.0
-  - conda-tree
-  - tensorflow
 
   # Infrastructure things
   - nbgitpuller==1.2.*
   - jupyter-resource-usage==0.7.*
   - jupytext==1.15.*
-  # - RISE==5.7.1
   - jupyter-server-proxy==4.*
 
   # From https://2i2c.freshdesk.com/a/tickets/497
@@ -45,7 +42,7 @@ dependencies:
     - git-credential-helpers==0.2
     - jupyter-tree-download==1.0.1
 
-    # Infrastructure thing that doesn't support python 3.11 on conda-forge
+    # Infrastructure thing that doesn't support notebook 7
     - jupyter_contrib_nbextensions==0.7.0
 
     - datascience==0.17.*
@@ -60,3 +57,11 @@ dependencies:
 
     # From https://2i2c.freshdesk.com/a/tickets/187
     - textblob==0.17.*
+
+    # Install this from pip because installing from conda conflicts with geopy / geopandas
+    # Re-evaluate once https://github.com/conda-forge/tensorflow-feedstock/pull/353 lands
+    - tensorflow==2.15.*
+
+    # Install from pip because it does not work from conda-forge atm
+    # https://github.com/conda-forge/rise-feedstock/issues/43 has information
+    - RISE==5.7.*
