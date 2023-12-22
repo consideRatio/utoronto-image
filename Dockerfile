@@ -3,8 +3,10 @@ FROM quay.io/jupyter/scipy-notebook:2023-12-08
 USER root
 
 # Install desktop packages
+# Also installs 'zip' needed by jupyter-tree-download
 RUN apt-get update -qq --yes > /dev/null && \
     apt-get install --yes -qq \
+        zip \
         dbus-x11 \
         firefox \
         xfce4 \
