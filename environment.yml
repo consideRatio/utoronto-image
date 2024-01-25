@@ -61,7 +61,12 @@ dependencies:
     # Install this from pip because installing from conda conflicts with geopy / geopandas
     # Re-evaluate once https://github.com/conda-forge/tensorflow-feedstock/pull/353 lands
     - tensorflow==2.15.*
+    # From https://2i2c.freshdesk.com/a/tickets/1259
+    - tensorflow-probability==0.23.*
 
     # Install from pip because it does not work from conda-forge atm
     # https://github.com/conda-forge/rise-feedstock/issues/43 has information
     - RISE==5.7.*
+
+    # From https://2i2c.freshdesk.com/a/tickets/1259
+    - pymc==5.10.*
